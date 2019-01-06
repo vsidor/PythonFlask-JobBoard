@@ -9,7 +9,7 @@ from .utils import *
 def test_review_template_module7():
     assert template_exists('review'), 'The `review.html` template does not exist in the `templates` folder.'
     el = template_data('review').select('.field.is-grouped .control .button.is-text')
-    assert len(el) == 1, 'Has the `HTML` from `templates.html` been copied to the `review.html` template?'
+    assert len(el) == 1, 'Has the `HTML` from `layout.html` been copied to the `review.html` template?'
     assert 'layout.html' in template_extends('review'), 'The `review.html` template does not extend `layout.html`.'
     assert 'employer:employer_id:employer_id' in template_functions('review', 'url_for'), 'Have you called the `url_for` function in the `review.html` file?'
 

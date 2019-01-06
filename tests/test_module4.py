@@ -19,7 +19,7 @@ def test_show_job_macro_html_module4():
     html = template_macro_soup('_macros', 'show_job')
     p = html.select('.card .card-header .card-header-title')
     div = html.select('.card-content .content')
-    assert len(p) == 1 and len(div) == 1, 'Has the `HTML` from `layout.html` been copied to the `show_job` macro?'
+    assert len(p) == 1 and len(div) == 1, 'Has the `HTML` from `templates.html` been copied to the `show_job` macro?'
 
 @pytest.mark.test_show_job_macro_header_module4
 def test_show_job_macro_header_module4():
@@ -65,7 +65,7 @@ def test_import_macros_module4():
 def test_index_template_module4():
     assert template_exists('index'), 'The `index.html` template does not exist in the `templates` folder.'
     el = template_data('index').select('.columns .column.is-one-fifth')
-    assert len(el) == 1, 'Has the `HTML` from `layout.html` been copied to the `index.html` template?'
+    assert len(el) == 1, 'Has the `HTML` from `templates.html` been copied to the `index.html` template?'
 
 @pytest.mark.test_display_all_jobs_module4
 def test_display_all_jobs_module4():

@@ -8,7 +8,7 @@ from .utils import *
 def test_employer_template_module6():
     assert template_exists('employer'), 'The `employer.html` template does not exist in the `templates` folder.'
     el = template_data('employer').select('.box .media .media-content .content')
-    assert len(el) == 1, 'Has the `HTML` from `layout.html` been copied to the `employer.html` template?'
+    assert len(el) == 1, 'Has the `HTML` from `templates.html` been copied to the `employer.html` template?'
     assert 'layout.html' in template_extends('employer'), 'The `employer.html` template does not extend `layout.html`.'
 
 @pytest.mark.test_employer_template_details_module6
